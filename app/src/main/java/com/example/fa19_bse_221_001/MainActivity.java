@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        messageFragment messageFragment = new messageFragment();
+        getSupportFragmentManager().beginTransaction().add(R.id.frameLayout,messageFragment).commit();
 
         addRecord = findViewById(R.id.fragment1btn);
         searchRecord = findViewById(R.id.fragment2btn);
